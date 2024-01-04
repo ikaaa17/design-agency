@@ -1,0 +1,91 @@
+.text {
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  font-family: 'Kanit';
+  font-size: 17px;
+  fill: #ffffff;
+  text-shadow: 2px 0px #ccc;
+}
+
+#rotatingText {
+  animation-name: rotate-circle;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rotate-circle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.main img {
+  position: absolute;
+  animation-name: rotate-circle;
+  animation-direction: reverse;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0px 0px 5px #333);
+}
+.main-sec {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.main-sec a {
+  position: absolute;
+  animation-direction: reverse;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0px 0px 5px #333);
+}
+.marquee-w {
+  position: relative;
+  display: block;
+  max-width: 1920px;
+  height: 140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.marquee {
+  position: absolute;
+  display: block;
+  margin: auto auto;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+}
+.marquee h1 {
+  display: inline-block;
+  padding-left: 100%;
+  font-family: 'poppinsbold';
+  text-align: center;
+  white-space: nowrap;
+  min-width: 100%;
+  height: 100%;
+  line-height: 140px;
+  font-size: 85px;
+  animation: marquee 8s linear infinite;
+}
+.marquee2 h1 {
+  animation-delay: 0s;
+}
+@keyframes marquee {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-100%, 0);
+  }
+}
+
